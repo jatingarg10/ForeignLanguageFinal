@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jatin.foreignlanguagefinal.French.FrenchFacts">
+
+    <ImageView
+        android:id="@+id/imageFact"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/booksf" />
+
+    <TextView
+        android:id="@+id/textFact"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/imageFact"
+        android:gravity="center"
+        android:maxLines="200"
+        android:scrollbars="vertical"
+        android:text="France is the world's most popular tourist destination – some 83.7 million visitors arrived in France, according to the World Tourism Organization report published in 2014, making it the world's most-visited country."
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/nextFact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textFact"
+        android:layout_centerInParent="true"
+        android:layout_margin="3dp"
+        android:text="Next" />
+
+</RelativeLayout>

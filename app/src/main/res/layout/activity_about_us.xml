@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum = "12"
+    tools:context="com.example.jatin.foreignlanguagefinal.NavigationDrawer.AboutUs">
+
+    <RelativeLayout
+        android:id="@+id/about_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="WE ARE COLLEGE DEVELOPERS, DEVELOPING ANDROID APPS FOR OUR COLLEGE AMITY UNIVERSITY.
+ OUR NAMES ARE -
+    1. KVN KAUNDINYA
+    2. JATIN GARG"
+            android:textSize="28sp"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/about_us">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Feedback: "
+            android:layout_weight="1"
+            android:id="@+id/feedbackText"/>
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="4"
+            android:layout_below="@+id/feedbackText"
+            android:id="@+id/userFeedback"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/submit"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/userFeedback"
+            />
+
+
+    </RelativeLayout>
+</RelativeLayout>

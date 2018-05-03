@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jatin.foreignlanguagefinal">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".GoogleLogin" />
+        <activity android:name=".NavigationDrawer.Settings" />
+        <activity android:name=".NavigationDrawer.AboutUs" />
+        <activity android:name=".NavigationDrawer.LanguageChooser" />
+        <activity android:name=".French.FrenchFacts" />
+        <activity android:name=".French.FrenchBooks" />
+        <activity android:name=".French.FrenchQuiz" />
+        <activity android:name=".French.FrenchMainLearn" />
+        <activity android:name=".German.SelectionGerman" />
+        <activity android:name=".Spanish.SelectionSpanish" />
+        <activity android:name=".French.SelectionFrench" />
+        <activity android:name=".German.GermanBooks" />
+        <activity android:name=".German.GermanFacts" />
+        <activity android:name=".German.GermanQuiz" />
+        <activity android:name=".German.GermanMainLearn" />
+        <activity android:name=".Spanish.SpanishBooks" />
+        <activity android:name=".Spanish.SpanishFacts" />
+        <activity android:name=".Spanish.SpanishMainLearn" />
+        <activity android:name=".Spanish.SpanishQuiz" />
+        <activity android:name=".French.FrenchMainNumbers" />
+        <activity android:name=".AppIntro.AppInto1" />
+        <activity android:name=".OptionMenu.DayNight" />
+        <activity android:name=".OptionMenu.Share" />
+        <activity android:name=".OptionMenu.Logout"></activity>
+    </application>
+
+</manifest>
