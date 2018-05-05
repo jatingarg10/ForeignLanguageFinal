@@ -37,7 +37,6 @@ public class GoogleLogin extends AppCompatActivity {
         });
 
 
-
     }
 
 

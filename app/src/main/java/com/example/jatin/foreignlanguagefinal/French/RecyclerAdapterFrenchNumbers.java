@@ -21,62 +21,58 @@ import static android.support.v4.content.ContextCompat.startActivity;
  * Created by Jatin on 23-Apr-18.
  */
 
-public class RecyclerAdapterFrenchNumbers extends RecyclerView.Adapter<RecyclerAdapterFrenchNumbers.ViewHolderFrenchNumbers> {
+public class RecyclerAdapterFrenchNumbers extends RecyclerView.Adapter<RecyclerAdapterFrenchNumbers.MyViewHolder> {
 
-    String[] data;
-    Context mContext;
+    String[] numbers;
+    ListItemClickListenerNumbers listItemClickListener;
 
-    public RecyclerAdapterFrenchNumbers(String[] data, Context ctx)
+
+    public interface ListItemClickListenerNumbers
     {
-        this.data = data;
-        this.mContext = ctx;
+        void onListItemClick(View view, int position);
+    }
+
+    public RecyclerAdapterFrenchNumbers(String[] numbers, ListItemClickListenerNumbers listItemClickListener) {
+        this.numbers = numbers;
+        this.listItemClickListener = listItemClickListener;
     }
 
     @Override
-    public ViewHolderFrenchNumbers onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.activity_french_main_numbers,parent,false);
-        return new ViewHolderFrenchNumbers(view);
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_languages,parent,false);
+        MyViewHolder viewHolder = new MyViewHolder(inflate);
+        return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolderFrenchNumbers holder, int position) {
-
-        String title = data[position];
-        holder.txtNumbers.setText(title);
-
-        holder.recyclerMainNumbers.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mContext.startActivity(new Intent(mContext,FrenchMainNumbers.class));
-            }
-        });
-
-
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        holder.txtview.setText(numbers[position]);
     }
 
     @Override
-    public int getItemCount()
+    public int getItemCount() {
+        return numbers.length;
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
-        return data.length;
-    }
 
+        ImageView imgView;
+        TextView txtview;
 
-    class ViewHolderFrenchNumbers extends RecyclerView.ViewHolder {
-
-        ImageView imgNumbers;
-        TextView txtNumbers;
-        RelativeLayout recyclerMainNumbers;
-
-        public ViewHolderFrenchNumbers(View itemView) {
+        public MyViewHolder(View itemView) {
             super(itemView);
 
-
-            imgNumbers =(ImageView) itemView.findViewById(R.id.imgNumbers);
-            txtNumbers = (TextView) itemView.findViewById(R.id.txtNumbers);
-            recyclerMainNumbers = itemView.findViewById(R.id.recyclerMainNumbers);
+            imgView = itemView.findViewById(R.id.imgView);
+            txtview = itemView.findViewById(R.id.txtView);
+            txtview.setOnClickListener(this);
         }
 
-
+        @Override
+        public void onClick(View view) {
+            listItemClickListener.onListItemClick(view, getAdapterPosition());
+        }
     }
+
+
 }

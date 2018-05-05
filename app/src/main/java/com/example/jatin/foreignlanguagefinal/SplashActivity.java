@@ -17,15 +17,15 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         Handler handler = new Handler();
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent  = new Intent(SplashActivity.this, AppInto1.class);
+                Intent intent  = new Intent(SplashActivity.this, GoogleLogin.class);
                 startActivity(intent);
                 finish();
             }
         }, 2500);
-
 
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -43,6 +43,9 @@ public class SplashActivity extends AppCompatActivity {
         });
 
         thread.start();
+
+
+
 
     }
 }

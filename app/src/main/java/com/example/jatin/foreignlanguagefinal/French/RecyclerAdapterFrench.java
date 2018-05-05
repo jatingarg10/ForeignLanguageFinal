@@ -2,6 +2,7 @@ package com.example.jatin.foreignlanguagefinal.French;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 
@@ -17,81 +18,60 @@ import com.example.jatin.foreignlanguagefinal.R;
  * Created by Jatin on 23-Apr-18.
  */
 
-public class RecyclerAdapterFrench extends RecyclerView.Adapter<RecyclerAdapterFrench.ViewHolderFrench> {
+public class RecyclerAdapterFrench extends RecyclerView.Adapter<RecyclerAdapterFrench.MyViewHolder> {
 
-    String[] data;
-    Context mContext;
-    private OnItemClickListener mListener;
+    String[] categories;
+    ListItemClickListener listItemClickListener;
 
-    public interface OnItemClickListener
+
+    public interface ListItemClickListener
     {
-        void onItemClick(int position);
+        void onListItemClick(View view, int position);
     }
 
-    public void setOnItemClickListener(OnItemClickListener listener)
-    {
-        mListener = listener;
-    }
-
-    public RecyclerAdapterFrench(String[] data, Context ctx) {
-        this.data = data;
-        this.mContext = ctx;
+    public RecyclerAdapterFrench(String[] categories, ListItemClickListener listItemClickListener) {
+        this.categories = categories;
+        this.listItemClickListener = listItemClickListener;
     }
 
     @Override
-    public ViewHolderFrench onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.list_item_languages, parent, false);
-        return new ViewHolderFrench(view);
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_languages,parent,false);
+        MyViewHolder viewHolder = new MyViewHolder(inflate);
+        return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolderFrench holder, int position) {
-        String title = data[position];
-        holder.frenchTextView.setText(title);
-        holder.frenchTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        holder.txtview.setText(categories[position]);
     }
 
     @Override
     public int getItemCount() {
-        return data.length;
+        return categories.length;
     }
 
-    class ViewHolderFrench extends RecyclerView.ViewHolder  {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
+    {
 
-        ImageView frenchImageView;
-        TextView frenchTextView;
+        ImageView imgView;
+        TextView txtview;
 
-
-        public ViewHolderFrench(View itemView ) {
+        public MyViewHolder(View itemView) {
             super(itemView);
 
-            frenchImageView = (ImageView) itemView.findViewById(R.id.imgView);
-            frenchTextView = (TextView) itemView.findViewById(R.id.txtView);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(mListener != null)
-                    {
-                        int position = getAdapterPosition();
-                        if(position!= RecyclerView.NO_POSITION)
-                        {
-                            mListener.onItemClick(position);
-                        }
-                    }
-
-                }
-            });
+            imgView = itemView.findViewById(R.id.imgView);
+            txtview = itemView.findViewById(R.id.txtView);
+            txtview.setOnClickListener(this);
         }
 
+        @Override
+        public void onClick(View view) {
+            listItemClickListener.onListItemClick(view, getAdapterPosition());
+        }
     }
+
+
 }
 
 

@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".AppIntro.AppInto1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,6 +27,8 @@
         <activity android:name=".French.FrenchBooks" />
         <activity android:name=".French.FrenchQuiz" />
         <activity android:name=".French.FrenchMainLearn" />
+        <activity android:name=".French.FrenchMainNumbers" />
+        <activity android:name=".French.RecyclerAdaterFrenchNumbers" />
         <activity android:name=".German.SelectionGerman" />
         <activity android:name=".Spanish.SelectionSpanish" />
         <activity android:name=".French.SelectionFrench" />
@@ -38,8 +40,8 @@
         <activity android:name=".Spanish.SpanishFacts" />
         <activity android:name=".Spanish.SpanishMainLearn" />
         <activity android:name=".Spanish.SpanishQuiz" />
-        <activity android:name=".French.FrenchMainNumbers" />
-        <activity android:name=".AppIntro.AppInto1" />
+
+        <activity android:name=".SplashActivity" />
         <activity android:name=".OptionMenu.DayNight" />
         <activity android:name=".OptionMenu.Share" />
         <activity android:name=".OptionMenu.Logout"></activity>
