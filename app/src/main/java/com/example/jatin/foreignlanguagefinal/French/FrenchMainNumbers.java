@@ -14,7 +14,7 @@ import com.example.jatin.foreignlanguagefinal.R;
 public class FrenchMainNumbers extends AppCompatActivity implements RecyclerAdapterFrenchNumbers.ListItemClickListenerNumbers {
 
     String[] numbers = {"Uh", "Deux", "Trois", "Quatre", "Cinq", "Six", "Sept", "Huit", "Neuf", "Dix", "Onze", "Douze", "Treize", "Quatorz", "Quinze"};
-    String[] imageURL = {"https://www.flaticon.com/free-icon/one_188234",
+    /*String[] imageURL = {"https://www.flaticon.com/free-icon/one_188234",
             "https://www.flaticon.com/free-icon/two_188235",
             "https://www.flaticon.com/free-icon/three_188236",
             "https://www.flaticon.com/free-icon/four_188237",
@@ -30,33 +30,7 @@ public class FrenchMainNumbers extends AppCompatActivity implements RecyclerAdap
             "https://www.flaticon.com/free-icon/fourteen_188247",
             "https://www.flaticon.com/free-icon/fifteen_188248",
             "https://www.flaticon.com/free-icon/four_188249",
-            "https://www.flaticon.com/free-icon/four_188250",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",};
+            "https://www.flaticon.com/free-icon/four_188250"};*/
     RecyclerView recylerNumbers;
 
     @Override

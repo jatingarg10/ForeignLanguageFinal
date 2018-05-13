@@ -15,7 +15,7 @@ import com.example.jatin.foreignlanguagefinal.R;
 public class FrenchMainLearn extends AppCompatActivity implements RecyclerAdapterFrench.ListItemClickListener {
 
     String[] categories = {"Numbers", "Family Members", "Colors", "Phrases", "Weeks", "Months", "Photo Gallery", "Blah1"};
-    String[] color = {"#ffd700","#228b22","#ffff00","#8b4513","#9370db","#0000ff","#ffdead"};
+    //String[] color = {"#ffd700","#228b22","#ffff00","#8b4513","#9370db","#0000ff","#ffdead"};
     RecyclerView recycler;
 
     @Override
