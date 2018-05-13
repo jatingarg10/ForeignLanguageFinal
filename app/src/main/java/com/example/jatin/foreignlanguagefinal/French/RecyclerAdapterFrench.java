@@ -2,6 +2,7 @@ package com.example.jatin.foreignlanguagefinal.French;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -44,6 +45,18 @@ public class RecyclerAdapterFrench extends RecyclerView.Adapter<RecyclerAdapterF
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.txtview.setText(categories[position]);
+
+        if(position %2 == 1)
+        {
+            holder.txtview.setBackgroundColor(Color.parseColor("#f39c12"));
+            //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+        }
+        else
+        {
+            holder.txtview.setBackgroundColor(Color.parseColor("##9b59b6"));
+            //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFAF8FD"));
+        }
+
     }
 
     @Override
