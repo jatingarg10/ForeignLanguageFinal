@@ -53,7 +53,8 @@
         <activity android:name=".French.FrenchMainPhrases" />
         <activity android:name=".French.FrenchMainDays" />
         <activity android:name=".French.FrenchMainMonths" />
-        <activity android:name=".French.FrenchMainGallery"></activity>
+        <activity android:name=".French.FrenchMainGallery" />
+        <activity android:name=".NavigationDrawer.Translate"></activity>
     </application>
 
 </manifest>

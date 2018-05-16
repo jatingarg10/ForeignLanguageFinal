@@ -74,10 +74,11 @@ public class LanguageChooser extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()) {
-                    /*case R.id.language:
-                        startActivity(new Intent(LanguageChooser.this, LanguageChooser.class));
+                    case R.id.translate:
+                        startActivity(new Intent(LanguageChooser.this, Translate.class));
                         finish();
-                        break;*/
+                        break;
+
                     case R.id.settings:
                         startActivity(new Intent(LanguageChooser.this,Settings.class));
                         finish();
