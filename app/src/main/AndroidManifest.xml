@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jatin.foreignlanguagefinal">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -31,7 +31,7 @@
         <activity android:name=".French.FrenchQuiz" />
         <activity android:name=".French.FrenchMainLearn" />
         <activity android:name=".French.FrenchMainNumbers" />
-        <activity android:name=".French.RecyclerAdaterFrenchNumbers" />
+        <activity android:name=".French.RecyclerAdapterFrenchNumbers" />
         <activity android:name=".German.SelectionGerman" />
         <activity android:name=".Spanish.SelectionSpanish" />
         <activity android:name=".French.SelectionFrench" />
@@ -43,11 +43,17 @@
         <activity android:name=".Spanish.SpanishFacts" />
         <activity android:name=".Spanish.SpanishMainLearn" />
         <activity android:name=".Spanish.SpanishQuiz" />
-
         <activity android:name=".SplashActivity" />
         <activity android:name=".OptionMenu.DayNight" />
         <activity android:name=".OptionMenu.Share" />
-        <activity android:name=".OptionMenu.Logout"></activity>
+        <activity android:name=".OptionMenu.Logout" />
+        <activity android:name=".French.FrenchQuizPlay" />
+        <activity android:name=".French.FrenchMainFamily" />
+        <activity android:name=".French.FrenchMainColor" />
+        <activity android:name=".French.FrenchMainPhrases" />
+        <activity android:name=".French.FrenchMainDays" />
+        <activity android:name=".French.FrenchMainMonths" />
+        <activity android:name=".French.FrenchMainGallery"></activity>
     </application>
 
 </manifest>

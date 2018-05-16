@@ -22,6 +22,7 @@ import com.example.jatin.foreignlanguagefinal.R;
 public class RecyclerAdapterFrench extends RecyclerView.Adapter<RecyclerAdapterFrench.MyViewHolder> {
 
     String[] categories;
+    String[] color;
     ListItemClickListener listItemClickListener;
 
 
@@ -30,14 +31,15 @@ public class RecyclerAdapterFrench extends RecyclerView.Adapter<RecyclerAdapterF
         void onListItemClick(View view, int position);
     }
 
-    public RecyclerAdapterFrench(String[] categories, ListItemClickListener listItemClickListener) {
+    public RecyclerAdapterFrench(String[] categories, String[] color, ListItemClickListener listItemClickListener) {
         this.categories = categories;
+        this.color = color;
         this.listItemClickListener = listItemClickListener;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_languages,parent,false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_main,parent,false);
         MyViewHolder viewHolder = new MyViewHolder(inflate);
         return viewHolder;
     }
@@ -45,18 +47,7 @@ public class RecyclerAdapterFrench extends RecyclerView.Adapter<RecyclerAdapterF
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         holder.txtview.setText(categories[position]);
-
-        /*if(position %2 == 1)
-        {
-            holder.txtview.setBackgroundColor(Color.parseColor("#f39c12"));
-            //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFFFF"));
-        }
-        else
-        {
-            holder.txtview.setBackgroundColor(Color.parseColor("##9b59b6"));
-            //  holder.imageView.setBackgroundColor(Color.parseColor("#FFFAF8FD"));
-        }*/
-
+        holder.txtview.setBackgroundColor(Color.parseColor(color[position]));
     }
 
     @Override
@@ -66,16 +57,13 @@ public class RecyclerAdapterFrench extends RecyclerView.Adapter<RecyclerAdapterF
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
-
-        ImageView imgView;
         TextView txtview;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            imgView = itemView.findViewById(R.id.imgView);
-            txtview = itemView.findViewById(R.id.txtView);
-            txtview.setOnClickListener(this);
+            txtview = itemView.findViewById(R.id.txtViewMain);
+            itemView.setOnClickListener(this);
         }
 
         @Override

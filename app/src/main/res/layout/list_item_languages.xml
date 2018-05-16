@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:weightSum="3">
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo"
-            android:id="@+id/imgView"/>
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:src="@drawable/logo"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/txtView"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="66dp"
             android:layout_height="wrap_content"
-            android:text="Family"
-            android:layout_weight="1"
-            android:textSize="24sp"
             android:layout_gravity="center"
-            android:paddingLeft="16dp"
-            android:id="@+id/txtView"/>
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Famillia"
+            android:textSize="28sp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/darker_gray"/>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/txtViewTrans"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="66dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtView"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:paddingLeft="10dp"
+            android:text="Family"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:background="@android:color/darker_gray"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_below="@+id/txtViewTrans"/>
+
+</RelativeLayout>

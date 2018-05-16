@@ -14,8 +14,8 @@ import com.example.jatin.foreignlanguagefinal.R;
 
 public class FrenchMainLearn extends AppCompatActivity implements RecyclerAdapterFrench.ListItemClickListener {
 
-    String[] categories = {"Numbers", "Family Members", "Colors", "Phrases", "Weeks", "Months", "Photo Gallery", "Blah1"};
-    //String[] color = {"#ffd700","#228b22","#ffff00","#8b4513","#9370db","#0000ff","#ffdead"};
+    String[] categories = {"Numbers", "Family Members", "Colors", "Phrases", "Days Of Week", "Months", "Photo Gallery"};
+    String[] color = {"#FFA500","#32CD32","#9400D3","#87CEEB","#8B4513","#2F4F4F","#FFFF00"};
     RecyclerView recycler;
 
     @Override
@@ -25,7 +25,7 @@ public class FrenchMainLearn extends AppCompatActivity implements RecyclerAdapte
 
         recycler = findViewById(R.id.recyclerFrench);
 
-        RecyclerAdapterFrench recyclerAdapterFrench = new RecyclerAdapterFrench(categories, this);
+        RecyclerAdapterFrench recyclerAdapterFrench = new RecyclerAdapterFrench(categories,color, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
         recycler.setAdapter(recyclerAdapterFrench);
@@ -43,8 +43,32 @@ public class FrenchMainLearn extends AppCompatActivity implements RecyclerAdapte
                 intent = new Intent(context, FrenchMainNumbers.class);
                 context.startActivity(intent);
                 break;
-
-            //Toast.makeText(this,position+1 + " Item Clicked " + categories[position],Toast.LENGTH_SHORT).show();
+            case 1:
+                intent = new Intent(context,FrenchMainFamily.class);
+                context.startActivity(intent);
+                break;
+            case 2:
+                intent = new Intent(context,FrenchMainColor.class);
+                context.startActivity(intent);
+                break;
+            case 3:
+                intent = new Intent(context,FrenchMainPhrases.class);
+                context.startActivity(intent);
+                break;
+            case 4:
+                intent = new Intent(context,FrenchMainDays.class);
+                context.startActivity(intent);
+                break;
+            case 5:
+                intent = new Intent(context,FrenchMainMonths.class);
+                context.startActivity(intent);
+                break;
+            default:
+                break;
+            case 6:
+                intent = new Intent(context,FrenchMainGallery.class);
+                context.startActivity(intent);
+                break;
 
 
         }

@@ -1,10 +1,12 @@
 package com.example.jatin.foreignlanguagefinal.NavigationDrawer;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -17,10 +19,7 @@ import android.widget.Switch;
 
 import com.example.jatin.foreignlanguagefinal.French.SelectionFrench;
 import com.example.jatin.foreignlanguagefinal.German.SelectionGerman;
-import com.example.jatin.foreignlanguagefinal.MainActivity;
-import com.example.jatin.foreignlanguagefinal.OptionMenu.DayNight;
-import com.example.jatin.foreignlanguagefinal.OptionMenu.Logout;
-import com.example.jatin.foreignlanguagefinal.OptionMenu.Share;
+import com.example.jatin.foreignlanguagefinal.GoogleLogin;
 import com.example.jatin.foreignlanguagefinal.R;
 import com.example.jatin.foreignlanguagefinal.Spanish.SelectionSpanish;
 
@@ -110,13 +109,39 @@ public class LanguageChooser extends AppCompatActivity {
         switch(item.getItemId())
         {
             case R.id.dayNight:
-                startActivity(new Intent(LanguageChooser.this,DayNight.class));
+
+
                 break;
             case R.id.share:
-                startActivity(new Intent(LanguageChooser.this,Share.class));
-                break;
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT,
+                        "Hey check out my app at: Sent from Foreign Language as Share Feature/*https://play.google.com/store/apps/details?id=com.google.android.apps.plus*/");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+
+                return true;
             case R.id.logout11:
-                startActivity(new Intent(LanguageChooser.this,Logout.class));
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+                builder.setMessage("Do you really want to close this application ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                startActivity(new Intent(LanguageChooser.this, GoogleLogin.class));
+                                finish();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+                AlertDialog alert = builder.create();
+                alert.setTitle("Logout");
+                alert.show();
+
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -132,6 +157,7 @@ public class LanguageChooser extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
 
     }
+
 
 
 
