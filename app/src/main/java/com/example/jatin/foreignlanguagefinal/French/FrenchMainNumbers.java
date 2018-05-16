@@ -48,7 +48,7 @@ public class FrenchMainNumbers extends AppCompatActivity implements RecyclerAdap
 
     RecyclerView recylerNumbers;
     SoundPool soundPool;
-    HashMap<Integer, Integer > loadedSound;
+    HashMap<Integer, Integer> loadedSound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,28 +64,29 @@ public class FrenchMainNumbers extends AppCompatActivity implements RecyclerAdap
                 .setMaxStreams(5)
                 .setAudioAttributes(audioAttributes)
                 .build();
+        setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
-        loadedSound = new LinkedHashMap<>();
-        loadedSound.put(1,soundPool.load(this, R.raw.french1,1));
-        loadedSound.put(2,soundPool.load(this, R.raw.french2,1));
-        loadedSound.put(3,soundPool.load(this, R.raw.french3,1));
-        loadedSound.put(4,soundPool.load(this, R.raw.french4,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french5,1));
+        loadedSound = new HashMap<Integer,Integer>();
+        loadedSound.put(0,soundPool.load(this, R.raw.french1,1));
+        loadedSound.put(1,soundPool.load(this, R.raw.french2,1));
+        loadedSound.put(2,soundPool.load(this, R.raw.french3,1));
+        loadedSound.put(3,soundPool.load(this, R.raw.french4,1));
+        loadedSound.put(4,soundPool.load(this, R.raw.french5,1));
         loadedSound.put(5,soundPool.load(this, R.raw.french6,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french7,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french8,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french9,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french10,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french11,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french12,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french13,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french14,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french15,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french16,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french17,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french18,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french19,1));
-        loadedSound.put(5,soundPool.load(this, R.raw.french20,1));
+        loadedSound.put(6,soundPool.load(this, R.raw.french7,1));
+        loadedSound.put(7,soundPool.load(this, R.raw.french8,1));
+        loadedSound.put(8,soundPool.load(this, R.raw.french9,1));
+        loadedSound.put(9,soundPool.load(this, R.raw.french10,1));
+        loadedSound.put(10,soundPool.load(this, R.raw.french11,1));
+        loadedSound.put(11,soundPool.load(this, R.raw.french12,1));
+        loadedSound.put(12,soundPool.load(this, R.raw.french13,1));
+        loadedSound.put(13,soundPool.load(this, R.raw.french14,1));
+        loadedSound.put(14,soundPool.load(this, R.raw.french15,1));
+        loadedSound.put(15,soundPool.load(this, R.raw.french16,1));
+        loadedSound.put(16,soundPool.load(this, R.raw.french17,1));
+        loadedSound.put(17,soundPool.load(this, R.raw.french18,1));
+        loadedSound.put(18,soundPool.load(this, R.raw.french19,1));
+        loadedSound.put(19,soundPool.load(this, R.raw.french20,1));
 
 
         recylerNumbers = findViewById(R.id.recyclerMainNumbers);
