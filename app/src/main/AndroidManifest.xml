@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.jatin.foreignlanguagefinal">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".FL"
         android:allowBackup="true"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AppIntro.AppInto1">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +25,7 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".GoogleLogin" />
+        <activity android:name=".AppIntro.AppInto1" />
         <activity android:name=".NavigationDrawer.Settings" />
         <activity android:name=".NavigationDrawer.AboutUs" />
         <activity android:name=".NavigationDrawer.LanguageChooser" />
@@ -43,10 +46,6 @@
         <activity android:name=".Spanish.SpanishFacts" />
         <activity android:name=".Spanish.SpanishMainLearn" />
         <activity android:name=".Spanish.SpanishQuiz" />
-        <activity android:name=".SplashActivity" />
-        <activity android:name=".OptionMenu.DayNight" />
-        <activity android:name=".OptionMenu.Share" />
-        <activity android:name=".OptionMenu.Logout" />
         <activity android:name=".French.FrenchQuizPlay" />
         <activity android:name=".French.FrenchMainFamily" />
         <activity android:name=".French.FrenchMainColor" />
@@ -54,7 +53,33 @@
         <activity android:name=".French.FrenchMainDays" />
         <activity android:name=".French.FrenchMainMonths" />
         <activity android:name=".French.FrenchMainGallery" />
-        <activity android:name=".NavigationDrawer.Translate"></activity>
+        <activity android:name=".NavigationDrawer.Translate" />
+        <activity android:name=".French.FrenchQuizPlayer" />
+        <activity android:name=".German.GermanQuizPlayer" />
+        <activity android:name=".German.GermanMainNumbers" />
+        <activity android:name=".German.GermanMainFamily" />
+        <activity android:name=".German.GermanMainColors" />
+        <activity android:name=".German.GermanMainPhrases" />
+        <activity android:name=".German.GermanMainDays" />
+        <activity android:name=".German.GermanMainMonths" />
+        <activity android:name=".French.Conjugate.Conjugation" />
+        <activity android:name=".French.Conjugate.Finir" />
+        <activity android:name=".French.Conjugate.Avoir" />
+        <activity android:name=".French.Conjugate.Etre" />
+        <activity android:name=".French.Conjugate.Lire" />
+        <activity android:name=".French.Conjugate.Aller" />
+        <activity android:name=".French.Conjugate.Parler" />
+        <activity android:name=".Spanish.SpanishMainNumber" />
+        <activity android:name=".Spanish.SpanishMainFamily" />
+        <activity android:name=".Spanish.SpanishMainColors" />
+        <activity
+            android:name=".Spanish.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".Spanish.SpanishMainPhrases" />
+        <activity android:name=".Spanish.SpanishMainDays" />
+        <activity android:name=".Spanish.SpanishMainMonths"></activity>
     </application>
 
 </manifest>

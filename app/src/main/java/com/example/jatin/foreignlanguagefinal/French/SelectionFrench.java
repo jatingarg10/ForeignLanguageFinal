@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
 
+import com.example.jatin.foreignlanguagefinal.French.Conjugate.Conjugation;
 import com.example.jatin.foreignlanguagefinal.NavigationDrawer.AboutUs;
 import com.example.jatin.foreignlanguagefinal.NavigationDrawer.LanguageChooser;
 import com.example.jatin.foreignlanguagefinal.NavigationDrawer.Settings;
@@ -75,7 +76,7 @@ public class SelectionFrench extends AppCompatActivity {
     private void setUpToolbar() {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle(" ");
+        toolbar.setTitle(" FRENCH");
         setSupportActionBar(toolbar);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.app_name, R.string.app_name);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -111,6 +112,10 @@ public class SelectionFrench extends AppCompatActivity {
                     if(finalI==3)
                     {
                         startActivity(new Intent(SelectionFrench.this, FrenchBooks.class));
+                    }
+                    if(finalI==4)
+                    {
+                        startActivity(new Intent(SelectionFrench.this, Conjugation.class));
                     }
 
                 }

@@ -1,17 +1,12 @@
 package com.example.jatin.foreignlanguagefinal.AppIntro;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.text.SpannableString;
-import android.widget.Toast;
 
 import com.example.jatin.foreignlanguagefinal.GoogleLogin;
 import com.example.jatin.foreignlanguagefinal.R;
-import com.example.jatin.foreignlanguagefinal.SplashActivity;
 import com.github.paolorotolo.appintro.AppIntro;
 import com.github.paolorotolo.appintro.AppIntroFragment;
 
@@ -28,7 +23,7 @@ public class AppInto1 extends AppIntro {
 
         addSlide(AppIntroFragment.newInstance("Foreign Language",
                 "Learn Español",
-                R.drawable.spain,
+                R.drawable.spain00,
                 Color.parseColor("#4fd7ff")));
 
         addSlide(AppIntroFragment.newInstance("Foreign Language",
@@ -43,7 +38,7 @@ public class AppInto1 extends AppIntro {
 
     @Override
     public void onDonePressed() {
-       startActivity(new Intent(this, SplashActivity.class));
+       startActivity(new Intent(this, GoogleLogin.class));
         /*SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         SharedPreferences.Editor e = getPrefs.edit();
         e.putBoolean("firstStart", false);
@@ -53,7 +48,7 @@ public class AppInto1 extends AppIntro {
 
     @Override
     public void onSkipPressed(Fragment currentFragment) {
-        startActivity(new Intent(this, SplashActivity.class));
+        startActivity(new Intent(this, GoogleLogin.class));
         finish();
     }
 

@@ -1,9 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.jatin.foreignlanguagefinal.German.GermanFacts">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+
+        android:id="@+id/imageFact"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/germanfacts1" />
+
+    <TextView
+        android:id="@+id/textFact"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/imageFact"
+        android:gravity="center"
+        android:maxLines="200"
+        android:scrollbars="vertical"
+        android:text="With 81 million people Germany has the largest population in the European Union. She is one of the most densely populated countries in the world."
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp" />
+
+
+
+    <Button
+        android:id="@+id/nextFact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textFact"
+        android:layout_centerInParent="true"
+        android:layout_margin="3dp"
+        android:text="Next" />
+
+</RelativeLayout>

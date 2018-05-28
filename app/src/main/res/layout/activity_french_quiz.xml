@@ -8,6 +8,27 @@
     android:background="@drawable/abstract3"
     tools:context="com.example.jatin.foreignlanguagefinal.French.FrenchQuiz">
 
+    <TextView
+        android:id="@+id/frenchPreviousScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:text="Previious Score: 0"
+        android:textColor="@android:color/holo_red_dark"/>
+
+    <TextView
+        android:id="@+id/frenchQuizTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NOOB"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/frenchPreviousScore"/>
+
 
     <Button
         android:layout_width="wrap_content"

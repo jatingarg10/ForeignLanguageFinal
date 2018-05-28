@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context="com.example.jatin.foreignlanguagefinal.GoogleLogin">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOG IN TO START LEARNING"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:layout_gravity="center"/>
+
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/googleButton"

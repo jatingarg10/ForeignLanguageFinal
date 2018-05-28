@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/frenchround"
-                android:layout_marginTop="125dp"
+                android:layout_marginTop="75dp"
                 android:text="FRENCH"
                 android:textAlignment="center"
                 android:textSize="60sp"
@@ -62,6 +62,18 @@
                 android:layout_gravity="center"
                 android:text="GERMAN"
                 android:background="@drawable/germanround"
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/translateBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="TRANSLATE"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/translateround"
                 android:textAlignment="center"
                 android:textSize="60sp"
                 android:textStyle="bold" />

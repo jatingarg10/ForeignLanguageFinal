@@ -28,6 +28,7 @@ public class LanguageChooser extends AppCompatActivity {
     Button frenchBtn;
     Button spanishBtn;
     Button germanBtn;
+    Button translateBtn;
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -42,6 +43,7 @@ public class LanguageChooser extends AppCompatActivity {
         frenchBtn = (Button) findViewById(R.id.frenchBtn);
         spanishBtn = (Button) findViewById(R.id.spanishBtn);
         germanBtn = (Button) findViewById(R.id.germanBtn);
+        translateBtn = (Button) findViewById(R.id.translateBtn);
 
         frenchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +65,14 @@ public class LanguageChooser extends AppCompatActivity {
                 startActivity(new Intent(LanguageChooser.this,SelectionGerman.class));
             }
         });
+
+        translateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LanguageChooser.this,Translate.class));
+            }
+        });
+
 
 
 

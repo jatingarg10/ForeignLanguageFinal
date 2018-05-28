@@ -20,6 +20,8 @@ public class RecyclerAdapterFrenchPhrases extends RecyclerView.Adapter<RecyclerA
     String[] frenchPhrases;
     String[] frenchPhrasesTranslate;
     int[] frenchPhrasesImages;
+    ListItemClickListener listItemClickListener;
+    Context context;
 
     public RecyclerAdapterFrenchPhrases(String[] frenchPhrases, String[] frenchPhrasesTranslate, int[] frenchPhrasesImages, ListItemClickListener listItemClickListener, Context context) {
         this.frenchPhrases = frenchPhrases;
@@ -29,8 +31,7 @@ public class RecyclerAdapterFrenchPhrases extends RecyclerView.Adapter<RecyclerA
         this.context = context;
     }
 
-    ListItemClickListener listItemClickListener;
-    Context context;
+
 
     public interface ListItemClickListener
     {

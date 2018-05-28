@@ -165,10 +165,6 @@ public class FrenchMainNumbers extends AppCompatActivity implements RecyclerAdap
                 break;
             default:
                 break;
-
-
-
-
         }
     }
 }
