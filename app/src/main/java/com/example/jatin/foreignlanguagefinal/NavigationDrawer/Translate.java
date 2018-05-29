@@ -1,5 +1,6 @@
 package com.example.jatin.foreignlanguagefinal.NavigationDrawer;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -19,9 +20,7 @@ public class Translate extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webView);
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://translate.google.com");
-        //WebView webView = new WebView(this);
-        //setContentView(webView);
-        //webView.loadUrl("https://translate.google.com");
+
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
@@ -29,11 +28,15 @@ public class Translate extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            super.onBackPressed();
 
+        if (webView.canGoBack())
+        {
+            webView.goBack();
+        }
+        else
+        {
+            startActivity(new Intent(Translate.this,LanguageChooser.class));
+            finish();
         }
     }
 }

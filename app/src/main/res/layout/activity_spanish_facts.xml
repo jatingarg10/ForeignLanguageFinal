@@ -9,7 +9,8 @@ tools:context="com.example.jatin.foreignlanguagefinal.Spanish.SpanishFacts">
 <ImageView
     android:id="@+id/imageFact"
     android:layout_width="match_parent"
-    android:layout_height="300dp" />
+    android:layout_height="300dp"
+    android:src="@drawable/spain00"/>
 
     <TextView
         android:id="@+id/textFact"

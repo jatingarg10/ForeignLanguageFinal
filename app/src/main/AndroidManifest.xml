@@ -79,7 +79,8 @@
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".Spanish.SpanishMainPhrases" />
         <activity android:name=".Spanish.SpanishMainDays" />
-        <activity android:name=".Spanish.SpanishMainMonths"></activity>
+        <activity android:name=".Spanish.SpanishMainMonths" />
+        <activity android:name=".Spanish.SpanishQuizPlayer"></activity>
     </application>
 
 </manifest>

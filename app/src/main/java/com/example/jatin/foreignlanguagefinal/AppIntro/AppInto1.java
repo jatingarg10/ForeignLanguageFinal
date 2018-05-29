@@ -23,7 +23,7 @@ public class AppInto1 extends AppIntro {
 
         addSlide(AppIntroFragment.newInstance("Foreign Language",
                 "Learn Español",
-                R.drawable.spain00,
+                R.drawable.spain,
                 Color.parseColor("#4fd7ff")));
 
         addSlide(AppIntroFragment.newInstance("Foreign Language",

@@ -15,25 +15,31 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.example.jatin.foreignlanguagefinal.French.SelectionFrench;
 import com.example.jatin.foreignlanguagefinal.German.SelectionGerman;
 import com.example.jatin.foreignlanguagefinal.GoogleLogin;
 import com.example.jatin.foreignlanguagefinal.R;
 import com.example.jatin.foreignlanguagefinal.Spanish.SelectionSpanish;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
 public class LanguageChooser extends AppCompatActivity {
 
     Button frenchBtn;
     Button spanishBtn;
     Button germanBtn;
-    Button translateBtn;
+    //Button translateBtn;
 
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +49,7 @@ public class LanguageChooser extends AppCompatActivity {
         frenchBtn = (Button) findViewById(R.id.frenchBtn);
         spanishBtn = (Button) findViewById(R.id.spanishBtn);
         germanBtn = (Button) findViewById(R.id.germanBtn);
-        translateBtn = (Button) findViewById(R.id.translateBtn);
+        //translateBtn = (Button) findViewById(R.id.translateBtn);
 
         frenchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,19 +72,23 @@ public class LanguageChooser extends AppCompatActivity {
             }
         });
 
-        translateBtn.setOnClickListener(new View.OnClickListener() {
+       /* translateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LanguageChooser.this,Translate.class));
             }
-        });
-
-
-
+        });*/
 
         setUpToolbar();
 
         navigationView = (NavigationView) findViewById(R.id.navigation_menu);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        TextView userName = (TextView)navigationView.getHeaderView(0).findViewById(R.id.headerName);
+        userName.setText(acct.getDisplayName());
+        ImageView mPic = (ImageView) navigationView.getHeaderView(0).findViewById(R.id.headerImage);
+        mPic.setImageURI(acct.getPhotoUrl());
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
